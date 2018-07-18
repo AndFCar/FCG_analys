@@ -15,7 +15,7 @@ import re
 import traceback
 import string
 
-max_bin = 20
+max_bin = 50
 force_bin = 5
 
 # define a binning function
@@ -31,7 +31,7 @@ def mono_bin(Y, X, n = max_bin):
             d2 = d1.groupby('Bucket', as_index=True)
             r, p = stats.spearmanr(d2.mean().X, d2.mean().Y)
             n = n - 1
-#             print(r)
+#           print(r)
         except Exception as e:
             n = n - 1
 
